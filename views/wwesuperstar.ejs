@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <h1>Current WWE Rosters on the program</h1>
+    <ul>
+
+  
+    <% for(let i=0;i<wweSuperstars.length;i++) {%>
+         <li class="superstars" data-id="<%=wweSuperstars[i]._id %>">
+           <% if(wweSuperstars[i].suspended===true){ %>
+                <span class= "strike"><%=wweSuperstars[i].birthName %></span>
+                <span class="strike"><%=wweSuperstars[i].ringName %></span>
+           <% } %>
+          
+           <% if(wweSuperstars[i].suspended===false){ %>
+            <span ><%=wweSuperstars[i].birthName %></span>
+            <span ><%=wweSuperstars[i].ringName %></span>
+       <% } %>
+            <i class="fa fa-trash-o" style="font-size:24px;color:red"></i>
+         </li>
+
+   <% } %>
+
+</ul>
+  <h2>Total number of superstars on suspension: <%= suspensionCount%></h2>
+
+  <form action="/roster/createRoster" method="POST">
+    <input type="text" placeholder="Enter wwe star's Birth name" name="birthName">
+    <input type="text" placeholder="Enter wwe star's Ring name" name="ringName">
+  
+    <button>Add a WWE superstar</button>
+  </form>
+
+  <script src="js/main.js"></script>
+  </body>
+</html>
