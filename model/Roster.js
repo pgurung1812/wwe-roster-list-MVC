@@ -12,6 +12,10 @@ const superstarSchema= new mongoose.Schema({
     suspended:{
         type: Boolean,
         required: true,
+    },
+    user:{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
     }
 }
 

@@ -1,14 +1,15 @@
 
-const roster=require("../model/roster")
+const roster=require("../model/Roster")
 
 module.exports={
 
     getHome: async(request,response)=>{
        try{
-         const listOfStars=await roster.find()
+        console.log(request.user)
+         const listOfStars=await roster.find({user:request.user._id})
          const suspendCount=await roster.countDocuments({suspended:true})
 
-         response.render("wwesuperstar.ejs",{wweSuperstars:listOfStars, suspensionCount:suspendCount})
+         response.render("wwesuperstar.ejs",{wweSuperstars:listOfStars, suspensionCount:suspendCount,user:request.user})
 
        }catch(err){
         console.log(err)
@@ -17,11 +18,12 @@ module.exports={
 
     addToRoster: async (request,response)=>{
         try{
-            console.log(request.body)
+      
             const newStar=await roster.create({
                 birthName: request.body.birthName,
                 ringName: request.body.ringName,
-                suspended: false
+                suspended: false,
+                user:request.user._id
             })
             response.redirect("/roster")
         }
