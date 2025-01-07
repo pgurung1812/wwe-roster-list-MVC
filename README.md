@@ -1,26 +1,18 @@
-My Awesome Project
+WWE Roster List
 
-Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
+This application lets you create your own WWE superstar's roster list by simply adding their real and ring name. you can also put superstars on suspension and can get them off suspension from your list.
 
 Link to project: http://recruiters-love-seeing-live-demos.com/
 
-alt tag
+Tech used: HTML, CSS, JavaScript, Express, Nodejs, MongoDB
 
 How It's Made:
 
-Tech used: HTML, CSS, JavaScript, Framework of choice
-
-Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write something. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
-
-Optimizations
-
-(optional)
-
-You don't have to include this section but interviewers love that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are GREAT to bring up in interviews and you can use this section as reference when studying for technical interviews!
+I created the application using Model View Controller(MVC) framework where each module was responsible to do its part for the successful operatio of the project. Models(Roster,User) was created in MongoDB as a singular entity in a database along with its properties. Express server was built to listen for any incoming web requests where two routes(home.js,roster.js) were created to handle any incoming requests. routes, then takes the help of controllers(homecontroller/rostercontroller) to invoke a method to either supply the data itself to view or uses the help of models to interact with the database to create a data, which then supplies the data to the views(index.ejs,login.ejs etc) to create a display for the user based on the request. middleware(auth.js) makes sure the user is logged in before displaying the homepage.
 
 Lessons Learned:
 
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those whoa this is awesome or wow I actually did it! moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
+It was a great lightbulb moment when I realized i could use a class to manipulate the display. for instance, when I click on the name of the superstar to put it on suspension, I can simply choose to apply the class to apply the strikethrough design to make it appear suspended. It was definitely a great learning experience how a simple click on the front end can manipulate the entity on a database.
 
 Examples:
 

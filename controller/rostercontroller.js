@@ -1,5 +1,6 @@
 
 const roster=require("../model/Roster")
+const user= require("../model/User")
 
 module.exports={
 
@@ -8,8 +9,9 @@ module.exports={
         console.log(request.user)
          const listOfStars=await roster.find({user:request.user._id})
          const suspendCount=await roster.countDocuments({suspended:true})
+         const User= await user.findById({_id:request.user})
 
-         response.render("wwesuperstar.ejs",{wweSuperstars:listOfStars, suspensionCount:suspendCount,user:request.user})
+         response.render("wwesuperstar.ejs",{wweSuperstars:listOfStars, suspensionCount:suspendCount,userName:User.userName})
 
        }catch(err){
         console.log(err)
