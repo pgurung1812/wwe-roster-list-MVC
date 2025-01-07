@@ -2,6 +2,8 @@ WWE Roster List
 
 This application lets you create your own personalized WWE superstar's roster list where you could put any superstar on suspension, delete the wwe superstar and get them off the suspension.
 
+                                                       ![GTsY](https://github.com/user-attachments/assets/94dd75c0-8a58-4e70-9cf5-3fd29269de57)
+
 Link to project: http://recruiters-love-seeing-live-demos.com/
 
 Tech used: HTML, CSS, JavaScript, Express, Nodejs, MongoDB
