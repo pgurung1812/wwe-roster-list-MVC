@@ -11,7 +11,7 @@
     <a href="/logout">Sign Out</a>
     <h1>My Current WWE Rosters on the program</h1>
 
-      <h2>Hello, There </h2> <h2><%=userName%></h2>
+      <span>Hello, There </span> <h2><%=userName%></h2>
      
     <ul>
 
@@ -20,7 +20,7 @@
          <li class="superstars" data-id="<%=wweSuperstars[i]._id %>">
            <% if(wweSuperstars[i].suspended===true){ %>
                 <span class= "strike"><%=wweSuperstars[i].birthName %></span>
-                <span class="strike"><%=wweSuperstars[i].ringName %></span>
+                <span class="strike"><%=wweSuperstars[i].ringName %></span> 
            <% } %>
           
            <% if(wweSuperstars[i].suspended===false){ %>
