@@ -1,6 +1,7 @@
 My Awesome Project
 
 Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
+![GTsY](https://github.com/user-attachments/assets/65bdb15c-e360-4d75-aaa7-1ec3ca913ad8)
 
 Link to project: http://recruiters-love-seeing-live-demos.com/
 
