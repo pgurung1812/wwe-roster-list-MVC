@@ -1,6 +1,6 @@
 WWE Roster List
 
-This application lets you create your own WWE superstar's roster list by simply adding their real and ring name. you can also put superstars on suspension and can get them off suspension from your list.
+Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
 
 Link to project: http://recruiters-love-seeing-live-demos.com/
 
