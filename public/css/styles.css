@@ -9,7 +9,16 @@ ul{
     background-color: aqua;
     padding: 10px;
 }
-.superstars{
-    margin: 10px;
-    font-weight: bold;
+.signup{
+    display: flex;
+    border: 1px solid red;
+    justify-content: center;
+    background-color: aqua;
+    padding: 10px;
+}
+.signup a{
+    padding: 10px;
+}
+.title{
+   text-align: center;
 }
